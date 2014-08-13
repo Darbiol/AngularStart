@@ -1,0 +1,26 @@
+<!DOCTYPE html>
+<html>
+<head>
+	<meta charset="utf-8">
+	<meta http-equiv="X-UA-Compatible" content="IE=edge">
+	<title>Angular</title>
+	<script type='text/javascript' src='js/lib/angular/angular.js' ></script>
+	<script src="js/app.js" type="text/javascript" ></script>
+	<script src="js/controller/mainController.js" type="text/javascript" ></script>
+</head>
+<body>
+	<h1>Angular	</h1>
+	<div id="content" class="container" ng-app="MyTutorialApp" ng-controller='MainController' >
+		
+		<input type="text" placeholder="add hero" ng-model='newPerson'> <button ng-click='addNew()' style="display:block" >Add!</button>
+		<input type="text" ng-model='searchInput' placeholder="Search">
+		<ul>
+			<li ng-repeat='person in people | filter:searchInput' ng-hide='person.flagged === true'>{{person.name}}</li>
+		</ul>
+		<ul>
+			<li ng-repeat='person in people | filter:searchInput' ng-hide='person.flaggeed === true'>{{person.name}}</li>
+		</ul>
+	</div>
+	</div>
+</body>
+</html>
