@@ -3,10 +3,11 @@ app.controller( 'MainController', function ( $scope ) {
 	$scope.selectedGenre  = null;
 	$scope.people	      = [
 		{
-			'id'             : 0,
-			'name'           : 'Bruce Wayne',
-			'Superhero Name' : 'Batman',
-			'Powers' : [
+			'id'        : 0,
+			'firstName' : 'Bruce',
+			'lastName'  : 'Wayne',
+			'heroName'  : 'Batman',
+			'Powers'    : [
 				'Martial Artist',
 				'Acrobatics',
 				'Wealthy',
@@ -15,53 +16,57 @@ app.controller( 'MainController', function ( $scope ) {
 			'flagged' : true
 		},
 		{
-			'id'             : 1,
-			'name'           : 'Diana',
-			'Superhero Name' : 'Wonderwoman',
-			'Powers' : [
+			'id'        : 1,
+			'firstName' : 'Diana',
+			'lastName'  : 'of Themyscira',
+			'heroName'  : 'Wonderwoman',
+			'Powers'    : [
 				'Flying',
 				'Cowgirl',
 				'Pilot',
 				'Super female strength'
 			],
-			'flagged' : true
+			'flagged'   : true
 		},
 		{
-			'id'             : 2,
-			'name'           : 'Barry Allen',
-			'Superhero Name' : 'Flash',
-			'Powers' : [
+			'id'        : 2,
+			'firstName' : 'Barry',
+			'lastName'  : 'Allen',
+			'heroName'  : 'Flash',
+			'Powers'    : [
 				'Lightning speed',
 				'Time travel',
 				'Lightning Reflexes',
 			],
-			'flagged' : true
+			'flagged'   : true
 		},
 		{
-			'id'             : 3,
-			'name'           : 'Clark Kent',
-			'Superhero Name' : 'Superman',
-			'Powers' : [
+			'id'        : 3,
+			'firstName' : 'Clark',
+			'lastName'  : 'Kent',
+			'heroName'  : 'Superman',
+			'Powers'    : [
 				'Flying',
-				'Bullet speen',
+				'Bullet speed',
 				'Bullet proof',
 				'Ice breath',
 				'Heat vision',
 				'X-ray vision',
 				'Superhuman strength'
 			],
-			'flagged' : true
+			'flagged'   : true
 		},
 		{
-			'id'             : 4,
-			'name'           : 'Hal Jordan',
-			'Superhero Name' : 'Green Lantern',
-			'Powers' : [
+			'id'        : 4,
+			'firstName' : 'Hal',
+			'lastName'  : 'Jordan',
+			'heroName'  : 'Green Lantern',
+			'Powers'    : [
 				'Power Ring',
 				'Imaginative',
 				'String Willed',
 			],
-			'flagged' : false
+			'flagged'   : false
 		}
 	];
 	$scope.newPerson = null;
@@ -75,4 +80,7 @@ app.controller( 'MainController', function ( $scope ) {
 			} );
 		}
 	}
-} );  
+	$scope.showModal = function () {
+		console.log(this)
+	}
+} );

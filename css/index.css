@@ -1,0 +1,72 @@
+		body {
+			font-family : Arial;
+		}
+		table, th, td, tr {
+		}
+
+		input, button {
+			outline: none;
+		}
+		table {
+			margin-top : 20px;
+		}
+
+		th, tr, td {
+			padding : 13px;
+		}
+		footer {
+			border-top : 2px solid gray;
+			padding : 10px;
+		}
+
+		tbody > tr:nth-child(odd) {
+			background-color: #99CC00;
+		}
+
+		tbody > tr:nth-child(even) {
+			background-color : #C2E066;
+		}
+
+		thead > tr {
+			background-color:#CCCC00;
+		}
+
+		main {
+			margin-bottom: 30px;
+		}
+
+		input {
+			font-size: 18px;
+			height : 25px;
+			width : 200px;
+			border : 1px solid #AEAEAE;
+			padding : 8px;
+			border-radius : 15px;
+		}
+
+		button {
+			background-color: #0066FF;
+			border : 0px;
+			height : 30px;
+			width : 70px;
+			color : #FFF;
+			border-radius: 5px;
+			font-size : 15px;
+			margin-left : 280px;
+		}
+
+		button:hover {
+			background-color: #4D94FF;
+		}
+
+		button:active {
+			background-color : #FFF;
+			color : #0066FF;
+			border : 1px solid #0066FF;
+		}
+
+		#addHero-modal {
+			width : 600px;
+			height : 750px;
+		}
+
