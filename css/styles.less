@@ -1,5 +1,6 @@
 		body {
 			font-family : Arial;
+			background-color: #E8E8E8;
 		}
 		table, th, td, tr {
 		}
@@ -8,18 +9,18 @@
 			outline: none;
 		}
 		table {
-			margin-top : 20px;
+			margin-top : 0px;
 		}
 
 		th, tr, td {
-			padding : 13px;
+			padding : 2px;
 		}
 		footer {
 			border-top : 2px solid gray;
 			padding : 10px;
 		}
 
-		tbody > tr:nth-child(odd) {
+		/*tbody > tr:nth-child(odd) {
 			background-color: #99CC00;
 		}
 
@@ -29,11 +30,7 @@
 
 		thead > tr {
 			background-color:#CCCC00;
-		}
-
-		main {
-			margin-bottom: 30px;
-		}
+		}*/
 
 		input {
 			font-size: 18px;
@@ -67,28 +64,43 @@
 
 		#addHero-modal {
 			width : 40%;
+			max-width: 400px;
 			border-radius: 3px;
 			background-color: #FFF;
 			position : absolute; 
 			top : 0px;
 			left : 0px;
+			margin-left: 30%;
+			margin-top : 5%;
 
 			.modal-footer {
 				border-top: 1px solid #A1A1A1;
 				padding : 10px;
-				.btn-cancel {
-					background-color: #FF3300;
-				}
+				
 
 				.btn-container {
 					display : inline;
 					margin-left: 45%;
+					
+						.btn-cancel {
+							background-color: #FF3300;
+						}
+
+						.btn-cancel:hover  {
+							background-color: #FF5930;
+						}
+
+						.btn-cancel:active  {
+							background-color: #FFF;
+							color           : #FF5930 ;
+						}
 
 
-					button {
-						display: inline;
-						margin : 0px;
-					}
+						button {
+							display: inline;
+							margin : 0px;
+						}
+							
 				}
 			}
 
@@ -128,3 +140,67 @@
 			right : 0px;
 
 		}
+
+
+/*	CARDS */
+	#cards-container {
+
+		list-style: none;
+		width : 630px;
+		padding : 0px;
+		
+		.profile-card{
+			background-color: #FFF;
+			margin-bottom: 15px;
+			padding : 15px 5px;
+			box-shadow: 7px 7px 8px #888888;
+
+			div {
+				display: inline-block;
+			}
+			
+			#profile{
+				top : 0px;
+				padding : 5px;
+				height : 100%;
+				img {
+					border-radius: 50px;
+					border : 1px solid #BCBCBC;
+					width: 90px;
+					height: 90px;
+				}
+			}
+
+			#profile-contents {
+
+			}
+
+			#fave-icon {
+				color : #CCCCCC;
+				font-size: 35px;
+			}
+		}
+
+	}
+
+/*	global */
+	
+.col-2 {
+	width: 20%;
+}
+
+.col-5 {
+	width: 50%;
+}
+
+.col-3 {
+	width: 30%;
+}
+
+.isFave {
+	color : #FFCC00 !important;
+}
+
+.isFave-false {
+	color : #CCCCCC !important;
+}

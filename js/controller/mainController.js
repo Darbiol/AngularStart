@@ -13,7 +13,8 @@ app.controller( 'MainController', function ( $scope ) {
 				'Wealthy',
 				'High IQ'
 			],
-			'flagged' : true
+			'flagged' : true,
+			'imgUrl' : '/resources/img/default-img.jpg'
 		},
 		{
 			'id'        : 1,
@@ -26,7 +27,8 @@ app.controller( 'MainController', function ( $scope ) {
 				'Pilot',
 				'Super female strength'
 			],
-			'flagged'   : true
+			'flagged'   : true,
+			'imgUrl' : '/resources/img/default-img.jpg'
 		},
 		{
 			'id'        : 2,
@@ -38,7 +40,8 @@ app.controller( 'MainController', function ( $scope ) {
 				'Time travel',
 				'Lightning Reflexes',
 			],
-			'flagged'   : true
+			'flagged'   : true,
+			'imgUrl' : '/resources/img/default-img.jpg'
 		},
 		{
 			'id'        : 3,
@@ -54,7 +57,8 @@ app.controller( 'MainController', function ( $scope ) {
 				'X-ray vision',
 				'Superhuman strength'
 			],
-			'flagged'   : true
+			'flagged'   : true,
+			'imgUrl' : '/resources/img/default-img.jpg'
 		},
 		{
 			'id'        : 4,
@@ -66,7 +70,8 @@ app.controller( 'MainController', function ( $scope ) {
 				'Imaginative',
 				'String Willed',
 			],
-			'flagged'   : false
+			'flagged'   : false,
+			'imgUrl' : '/resources/img/default-img.jpg'
 		}
 	];
 	$scope.newPerson = null;
@@ -80,7 +85,11 @@ app.controller( 'MainController', function ( $scope ) {
 			} );
 		}
 	}
-	$scope.showModal = function () {
-		console.log(this)
+	$scope.toggleFave = function () {
+		if ( this.person.flagged ) {
+			this.person.flagged = false;
+		}else {
+			this.person.flagged = true;
+		}
 	}
 } );
