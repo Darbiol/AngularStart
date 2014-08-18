@@ -1,0 +1,20 @@
+[
+	{
+		"FirstName"  : "Bruce",
+		"LastName"   : "Wayne",
+		"HeroName"   : "Batman",
+		"Born"       : "February 19, 1939",
+		"Species"    : "Human",
+		"Email"      : "true.blood69@dccomics.com",
+		"Abilities"  : "Batman has no inherent superhuman powers. To compensate for this, he relies on \"his own scientific knowledge, detective skills, and athletic prowess.\"",
+		"Origin"     : "Bruce Wayne is born to Dr. Thomas Wayne and his wife Martha, two very wealthy and charitable Gotham City socialites. Bruce is brought up in Wayne Manor, and leads a happy and privileged existence until the age of eight, when his parents are killed by a small-time criminal named Joe Chill while on their way home from a movie theater. That night, Bruce Wayne swears an oath to spend his life fighting crime. He engages in intense intellectual and physical training; however, he realizes that these skills alone would not be enough. \"Criminals are a superstitious cowardly lot,\" Wayne remarks, \"so my disguise must be able to strike terror into their hearts. I must be a creature of the night, black, terrible...\" As if responding to his desires, a bat suddenly flies through the window, inspiring Bruce to take on the persona of Batman.",	
+		"profileImg" : "/resources/img/default-img.jpg",
+		"imageUrl"   : [
+			"/resources/img/0/image_001.jpg",
+			"/resources/img/0/image_002.jpg",
+			"/resources/img/0/image_003.jpg",
+			"/resources/img/0/image_004.jpg",
+			"/resources/img/0/image_005.jpg"
+		]
+	}
+]

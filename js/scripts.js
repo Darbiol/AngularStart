@@ -16,6 +16,10 @@ document.getElementById('overlay').addEventListener( 'click', function () {
 	toggleModal( overlay, modal, 'inactive' );
 } );
 
+var navArr = document.querySelectorAll('#tabs>ul>li>a');
+toggleNav(navArr);
+
+
 function toggleVisibility ( element ) {
 
 	if( element.style.display === 'block' && element.style.visibility === 'visible' ) {
@@ -41,4 +45,23 @@ function toggleModal ( overlay, modal, state ) {
 	}		
 
 	return;
+}
+
+function toggleNav ( elementArr ) {
+
+	for( var i=0; i< navArr.length; i++) {
+		
+		elementArr[i].addEventListener( 'click', function() {
+			var listParent = this.parentNode;
+			var grandParent = listParent.parentNode;
+			var list = grandParent.childNodes;
+
+			for( var j=0; j<list.length; j++ ){
+				if( list[j].className === 'active' ) {
+					list[j].setAttribute( 'class', '' );
+				}
+			}
+			listParent.setAttribute( 'class', 'active' );
+		} );
+	}
 }

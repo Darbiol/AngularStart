@@ -1,0 +1,28 @@
+<ul id="cards-container">
+	<li class='profile-card' ng-repeat='person in people | filter:searchInput' >
+		<div id='profile' class='col-2'><img ng-src="{{person.imgUrl}}" alt=""></div>
+		<div id="profile-contents" class='col-5'>
+			<table>
+				<tbody>
+					<tr>
+						<td>First Name :</td>
+						<td>{{person.firstName}}</td>
+					</tr>
+					<tr>
+						<td>Last Name :</td>
+						<td>{{person.lastName}}</td>
+					</tr>
+					<tr>
+						<td>Hero Name :</td>
+						<td>{{person.heroName}}</td>
+					</tr>
+				</tbody>
+			</table>
+
+		</div>
+		<div id='fave-icon' class='col-2' ng-class="{true : 'isFave', false : ''}[person.flagged==true]" ng-click='toggleFave()'>
+			<i class="fa fa-star"></i>
+			<a href="#/hero/{{person.id}}" class="btn-active">View!</a>
+		</div>
+	</li>
+</ul>

@@ -1,0 +1,23 @@
+[
+	{
+		"FirstName"  : "Dian",
+		"LastName"   : "Prince",
+		"HeroName"   : "Wonder Woman",
+		"Born"       : "February 19, 1939",
+		"Species"    : "Demigod",
+		"Email"      : "xena_rox@dccomics.com",
+		"Abilities"  : "Diana is depicted as a masterful athlete, acrobat, fighter and strategist, trained and experienced in many ancient and modern forms of armed and unarmed combat, including exclusively Amazonian martial arts. In some versions, her mother trained her, as Wonder Girl, for a future career as Wonder Woman. From the beginning, she is portrayed as highly skilled in using her Amazon bracelets to stop bullets and in wielding her golden lasso.",
+		"Origin"     : "Diana is the daughter of Queen Hippolyta, the first child born on Paradise Island in the three thousand year history that the immortal Amazons lived there. The Amazons had been created around 1200 B.C. when the Greek goddesses drew forth the souls of all women who had been murdered by men. One soul was left behind, the one that would be born as Diana. That soul originally belonged to the unborn daughter of the first woman murdered by a man (whom Hippolyta was the reincarnation of). In the late 20th Century, Hippolyta was instructed to mold some clay from the shores of Paradise Island into the form of a baby girl. Six members of the Greek Pantheon then bonded the soul to the clay, giving it life. Each of the six also granted Diana a gift: Demeter, great strength; Athena, wisdom and courage; Artemis, a hunter's heart and a communion with animals; Aphrodite, beauty and a loving heart; Hestia, sisterhood with fire; Hermes, speed and the power of flight. Diana grew up surrounded by a legion of sisters and mothers. When she was a young woman, the gods decreed that the Amazons must send an emissary into Man's World. Queen Hippolyta ordered a contest to be held, but forbade Diana from participating. Diana disobeyed and did so anyway in disguise, easily winning the contest and being named the Amazon's champion. She was given a uniform fashioned from the standard of someone who had visited the island a few decades earlier.",	
+		"profileImg" : "/resources/img/default-img.jpg",
+		"imageUrl"   : [
+			"/resources/img/0/image_001.jpg",
+			"/resources/img/0/image_002.jpg",
+			"/resources/img/0/image_003.jpg",
+			"/resources/img/0/image_004.jpg",
+			"/resources/img/0/image_005.jpg",
+			"/resources/img/0/image_006.jpg",
+			"/resources/img/0/image_007.jpg",
+			"/resources/img/0/image_008.jpg"
+		]
+	}
+]

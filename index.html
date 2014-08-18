@@ -1,5 +1,5 @@
  <!DOCTYPE html>
-<html>
+<html ng-app="MyTutorialApp">
 <head>
 	<meta charset="utf-8">
 	<meta http-equiv="X-UA-Compatible" content="IE=edge">
@@ -8,50 +8,29 @@
 	<link href="//maxcdn.bootstrapcdn.com/font-awesome/4.1.0/css/font-awesome.min.css" rel="stylesheet">
 	<script src="js/lib/less/dist/less-1.7.4.min.js" type="text/javascript"></script>
 	<script type='text/javascript' src='js/lib/angular/angular.js' ></script>
+	<script type='text/javascript' src='js/lib/angular-route/angular-route.js' ></script>
 	<script src="js/app.js" type="text/javascript" ></script>
 	<script src="js/controller/mainController.js" type="text/javascript" ></script>
+	<script src="js/controller/allController.js" type="text/javascript" ></script>
+	<script src="js/controller/favoriteController.js" type="text/javascript" ></script>
+	<script src="js/controller/nonfavoriteController.js" type="text/javascript" ></script>
+	<script src="js/controller/profileController.js" type="text/javascript" ></script>
 </head>
-<body>
+<body ng-controller='AllController'>
 	<h1>Angular	</h1>
-	<div id="content" class="container" ng-app="MyTutorialApp" ng-controller='MainController' >
+	<div id="content" class="container"  ng-controller='AllController' >
 		<input type="text" ng-model='searchInput' placeholder="Search">
 		<button id='show-modal'>Add!</button>
+		<div id="tabs">
+			<ul>
+				<li  class='active'> <a href="#all"> <span> All </span> </a> </li>
+				<li> <a href="#favorites"> <span> Favorite </span> </a> </li>
+				<li> <a href="#non-favorites"> <span> Non-Favorite </span> </a> </li>
+			</ul>
+		</div>
 
-		<ul id="cards-container">
-			<li class='profile-card' ng-repeat='person in people | filter:searchInput' ng-show='person.flagged == true' >
-				<div id='profile' class='col-2'><img src="{{person.imgUrl}}" alt=""></div>
-				<div id="profile-contents" class='col-5'>
-					<table>
-						<tbody>
-							<tr>
-								<td>First Name :</td>
-								<td>{{person.firstName}}</td>
-							</tr>
-							<tr>
-								<td>Last Name :</td>
-								<td>{{person.lastName}}</td>
-							</tr>
-							<tr>
-								<td>Hero Name :</td>
-								<td>{{person.heroName}}</td>
-							</tr>
-							<tr>
-								<td>Powers</td>
-								<td>
-									<ol>
-										<li ng-repeat="powers in people[person.id].Powers">{{powers}}</li>
-									</ol>
-								</td>
-							</tr>
-						</tbody>
-					</table>
-
-				</div>
-				<div id='fave-icon' class='col-2' ng-class="{true : 'isFave', false : ''}[person.flagged==true]" ng-click='toggleFave()'>
-					<i class="fa fa-star"></i>
-				</div>
-			</li>
-		</ul>
+		<div ng-view ></div>
+		
 
 		<!-- MODAL -->
 

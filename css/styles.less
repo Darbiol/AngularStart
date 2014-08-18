@@ -119,7 +119,7 @@
 				}
 			}
 		}
-
+		
 		.form-item-wrapper {
 			padding : 10px;
 		}
@@ -140,6 +140,37 @@
 			right : 0px;
 
 		}
+
+
+/*	Navbar  */
+
+	#tabs {
+
+		ul {
+			list-style: none;
+			border-bottom : 1px solid #0066FF;
+			padding-bottom : 3px;
+
+			li {
+				display: inline;
+				padding : 3px 10px;
+
+				a {
+					text-decoration: none;
+					color : #0066FF;
+				}
+			}
+
+			.active {
+				border-bottom : 3px solid #FF0000;
+
+				a {
+					text-decoration: none;
+					color : #FF0000;
+				}
+			}
+		}
+	}
 
 
 /*	CARDS */
@@ -178,6 +209,30 @@
 			#fave-icon {
 				color : #CCCCCC;
 				font-size: 35px;
+
+				a {
+					margin : 0px;
+					display: block;
+					background-color: #0066FF;
+					text-decoration: none;
+					color : #FFF;
+					text-align: center;
+					width : 70px;
+					height: 24px;
+					font-size: 15px;
+					border-radius: 5px;
+					padding-top : 6px;
+				}
+
+				a:hover {
+					background-color: #4D94FF;
+				}
+
+				a:active {
+					background-color: #FFF;
+					border : 1px solid #0066FF;
+					color : #0066FF;
+				}
 			}
 		}
 

@@ -1,0 +1,21 @@
+[
+	{
+		"FirstName"  : "Barry",
+		"LastName"   : "Allen",
+		"HeroName"   : "Flash",
+		"Born"       : "February 19, 1939",
+		"Species"    : "Human",
+		"Email"      : "lightning_mcQueen@dccomics.com",
+		"Abilities"  : "Super Speed",
+		"Origin"     : "a police scientist who has a reputation for being very slow, deliberate, and frequently late, which frustrated his fiancée, Iris West. One night, as he was preparing to leave work, a lightning bolt shattered a case full of chemicals and spilled them all over Allen. As a result, Allen found that he could run extremely fast and had matching reflexes. He donned a set of red tights sporting a lightning bolt, dubbed himself the Flash (after his childhood hero, Jay Garrick), and became a crimefighter active in Central City. In his civilian identity, he stores the costume compressed in a special ring via the use of a special gas that could compress cloth fibers to a very small fraction of their normal size.",	
+		"profileImg" : "/resources/img/default-img.jpg",
+		"imageUrl"   : [
+			"/resources/img/2/image_001.jpg",
+			"/resources/img/2/image_002.jpg",
+			"/resources/img/2/image_003.jpg",
+			"/resources/img/2/image_004.jpg",
+			"/resources/img/2/image_005.jpg",
+			"/resources/img/2/image_006.jpg"
+		]
+	}
+]
