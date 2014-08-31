@@ -1,9 +1,9 @@
-app.controller( 'ProfileController', [ '$rootScope', '$routeParams', '$http',  function ( $rootScope, $routeParams, $http ) {
+app.controller( 'ProfileController', [ '$scope', '$routeParams', '$http',  function ( $scope, $routeParams, $http ) {
 	
-	$rootScope.id = $routeParams.id; 
-	$http.get( 'resources/data/' + $rootScope.id + '.json' ).success( function ( data ) {
+	$scope.id = $routeParams.id; 
+	$http.get( 'resources/data/' + $scope.id + '.json' ).success( function ( data ) {
 		console.log(data)
-		$rootScope.person = data;
+		$scope.person = data;
 	} );
 
 } ] );

@@ -1,5 +1,15 @@
+<input type="text" ng-model='searchInput' placeholder="Search">
+<button id='show-modal'>Add!</button>
+<div id="tabs">
+	<ul>
+		<li ng-class="{true : 'active', false : ''}[isActive('/all') == true]"> <a href="#all"> <span> All </span> </a> </li>
+		<li ng-class="{true : 'active', false : ''}[isActive('/favorites') == true]"> <a href="#favorites"> <span> Favorite </span> </a> </li>
+		<li ng-class="{true : 'active', false : ''}[isActive('/non-favorites') == true]"> <a href="#non-favorites"> <span> Non-Favorite </span> </a> </li>
+	</ul>
+</div>
+
 <ul id="cards-container">
-	<li class='profile-card' ng-repeat='person in people | filter:searchInput' >
+	<li class='profile-card' ng-repeat='person in filteredHero | filter:searchInput'>
 		<div id='profile' class='col-2'><img ng-src="{{person.imgUrl}}" alt=""></div>
 		<div id="profile-contents" class='col-5'>
 			<table>

@@ -18,12 +18,12 @@ app.config( function ( $routeProvider ) {
 		} )
 		// Favorites route
 		.when( '/favorites', {
-			'templateUrl' : 'js/templates/favorites.html',
+			'templateUrl' : 'js/templates/all.html',
 			'controller'  : 'FavoriteController'
 		} )
 		// non favorite routes
 		.when( '/non-favorites', {
-			'templateUrl' : 'js/templates/nonfavorites.html',
+			'templateUrl' : 'js/templates/all.html',
 			'controller'  : 'NonFavoriteController'
 		} )
 		// Specific Id
@@ -32,3 +32,4 @@ app.config( function ( $routeProvider ) {
 			'controller'  : 'ProfileController'
 		} )
 } );
+

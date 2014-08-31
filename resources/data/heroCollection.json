@@ -4,8 +4,8 @@
 		"firstName" : "Bruce",
 		"lastName"  : "Wayne",
 		"heroName"  : "Batman",
-		"flagged" : true,
-		"imgUrl" : "/resources/img/default-img.jpg"
+		"flagged"   : true,
+		"imgUrl"    : "/resources/img/0/image_001.jpg"
 	},
 	{
 		"id"        : 1,
@@ -13,7 +13,7 @@
 		"lastName"  : "of Themyscira",
 		"heroName"  : "Wonderwoman",
 		"flagged"   : true,
-		"imgUrl" : "/resources/img/default-img.jpg"
+		"imgUrl"    : "/resources/img/1/image_001.jpg"
 	},
 	{
 		"id"        : 2,
@@ -21,7 +21,7 @@
 		"lastName"  : "Allen",
 		"heroName"  : "Flash",
 		"flagged"   : true,
-		"imgUrl" : "/resources/img/default-img.jpg"
+		"imgUrl"    : "/resources/img/2/image_001.jpg"
 	},
 	{
 		"id"        : 3,
@@ -29,7 +29,7 @@
 		"lastName"  : "Kent",
 		"heroName"  : "Superman",
 		"flagged"   : true,
-		"imgUrl" : "/resources/img/default-img.jpg"
+		"imgUrl"    : "/resources/img/3/image_001.jpg"
 	},
 	{
 		"id"        : 4,
@@ -37,6 +37,6 @@
 		"lastName"  : "Jordan",
 		"heroName"  : "Green Lantern",
 		"flagged"   : false,
-		"imgUrl" : "/resources/img/default-img.jpg"
+		"imgUrl"    : "/resources/img/4/image_001.jpg"
 	}
 ]

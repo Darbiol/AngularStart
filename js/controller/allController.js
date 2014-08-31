@@ -1,11 +1,8 @@
-app.controller( 'AllController', [ '$rootScope', '$http',  function ( $rootScope, $http ) {
+app.controller( 'AllController', [ '$rootScope', '$http', '$scope', '$location',  function ( $rootScope, $http, $scope, $location ) {
 
-	
 	$http.get('resources/data/heroCollection.json').success(function(data) {
-		console.log(data);
-		$rootScope.people = data
+		$scope.filteredHero = data;
 	});
-
 
 
 	$rootScope.addNew = function () {
@@ -25,4 +22,9 @@ app.controller( 'AllController', [ '$rootScope', '$http',  function ( $rootScope
 			this.person.flagged = true;
 		}
 	}
+
+	$scope.isActive = function ( route ) {
+		return route === $location.path();
+	}
 } ] );
+

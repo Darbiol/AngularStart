@@ -1,0 +1,112 @@
+@shadow-gray : #949494;
+@dark-gray : #4C4C4C;
+@white     : #FFF;
+@black     : #000;
+
+.container {
+	width   : 100%;
+	padding : 15px;
+}
+
+.col-1{
+	width : 10%;
+	display: inline;
+	padding : 10px;
+}
+
+.col-2{
+	width : 20%;
+	display: inline-block;
+	padding : 10px;
+}
+
+.col-3{
+	width : 30%;
+	display: inline-block;
+	padding : 10px;
+}
+
+.col-4{
+	width : 40%;
+	display: inline-block;
+	padding : 10px;
+}
+
+.col-5{
+	width : 50%;
+	display: inline-block;
+	padding : 10px;
+}
+
+.col-6{
+	width : 60%;
+	display: inline-block;
+	padding : 10px;
+}
+
+.col-7{
+	width : 70%;
+	display: inline-block;
+	padding : 10px;
+}
+
+.col-8{
+	width : 80%;
+	padding : 10px;
+}
+
+.col-9{
+	width : 90%;
+	display: inline-block;
+	padding : 10px;
+}
+
+.col-10{
+	width : 100%;
+	display: inline-block;
+	padding : 10px;
+}
+
+
+
+.bound {
+	border-right: 1px solid @dark-gray;
+	border-left: 1px solid @dark-gray;
+}
+
+.left {
+	float : left;
+}
+
+#img-container {
+	padding : 10px;
+	border : 1px solid @dark-gray;
+	width : 150px;
+	background-color: @white;
+	box-shadow: 7px 7px 10px @shadow-gray;
+	margin: 0px auto;
+	img {
+		height : 200px;
+		width : 150px;
+		text-align: center;
+	}
+}
+
+.profile-details {
+	table {
+
+		tr {
+			border-bottom: 1px solid @dark-gray;
+			td:first-child {
+				width      : 25%;
+				font-weight: bold;
+			}
+
+			td:last-child {
+				width : 75%;
+				padding : 5px;
+				line-height : 1.5em;
+			}
+		}
+	}
+}

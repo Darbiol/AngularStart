@@ -1,30 +1,57 @@
-<!-- <ul id="cards-container">
-	<li class='profile-card' ng-repeat='person in people | filter:searchInput' ng-show='person.flagged == true' >
-		<div id='profile' class='col-2'><img ng-src="{{person.imgUrl}}" alt=""></div>
-		<div id="profile-contents" class='col-5'>
+<div class="container" ng-repeat='hero in person'>
+	<div class="col-2 left">
+		<div id="img-container">
+			<img ng-src="{{hero.profileImg}}" alt="">
+		</div>
+
+	</div>
+	<div class="col-3 left bound">
+		<div class="profile-header">
+			<h2>{{hero.HeroName}}</h2>
+		</div>
+		<div class='profile-details'>
 			<table>
 				<tbody>
 					<tr>
-						<td>First Name :</td>
-						<td>{{person.firstName}}</td>
+						<td> First Name : </td>
+						<td> {{hero.FirstName}} </td>
 					</tr>
 					<tr>
-						<td>Last Name :</td>
-						<td>{{person.lastName}}</td>
+						<td> Last Name : </td>
+						<td> {{hero.LastName}} </td>
 					</tr>
 					<tr>
-						<td>Hero Name :</td>
-						<td>{{person.heroName}}</td>
+						<td> Date Of Birth : </td>
+						<td> {{hero.Born}} </td>
+					</tr>
+					<tr>
+						<td> Species : </td>
+						<td> {{hero.Species}} </td>
+					</tr>
+					<tr>
+						<td> Contact : </td>
+						<td>  {{hero.Email}}  </td>
+					</tr>
+					<tr>
+						<td> Abilities : </td>
+						<td> <p>{{hero.Abilities}}</p>  </td>
+					</tr>
+					<tr>
+						<td> Origins : </td>
+						<td> <p>{{hero.Origin}}</p>  </td>
 					</tr>
 				</tbody>
 			</table>
-
 		</div>
-		<div id='fave-icon' class='col-2' ng-class="{true : 'isFave', false : ''}[person.flagged==true]" ng-click='toggleFave()'>
-			<i class="fa fa-star"></i>
-			<a href="#/hero/{{person.id}}" class="btn-active">View!</a>
-		</div>
-	</li>
-</ul> -->
 
-<h1 ng-repeat='info in person'>{{ info.HeroName}}</h1>
+	</div>
+	<div class="col-5 left">
+		
+		<div id="selected-image"></div>
+		<div id="image-list">
+			<ul >
+				<li ng-repeat='images in hero.imageUrl'></li>
+			</ul>
+		</div>
+	</div>
+</div>
