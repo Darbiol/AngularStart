@@ -18,6 +18,7 @@
   },
   "homepage": "https://github.com/Darbiol/AngularStart",
   "dependencies": {
-    "express": "^4.8.3"
+    "express": "^4.8.3",
+    "body-parser": "~1.6.7"
   }
 }

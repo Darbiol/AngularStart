@@ -30,9 +30,13 @@
 			</table>
 
 		</div>
-		<div id='fave-icon' class='col-2' ng-class="{true : 'isFave', false : ''}[person.flagged==true]" ng-click='toggleFave()'>
-			<i class="fa fa-star"></i>
+		<div id='fave-icon' class='col-2' >
+
+			<!-- <a href=""> -->
+				<i class="fa fa-star" ng-class="{true : 'isFave', false : ''}[person.flagged==true]" ng-click='toggleFave()'></i>
+			<!-- </a> -->
 			<a href="#/hero/{{person.id}}" class="btn-active">View!</a>
 		</div>
+
 	</li>
 </ul>

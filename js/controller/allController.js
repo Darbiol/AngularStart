@@ -1,6 +1,6 @@
 app.controller( 'AllController', [ '$rootScope', '$http', '$scope', '$location',  function ( $rootScope, $http, $scope, $location ) {
 
-	$http.get('resources/data/heroCollection.json').success(function(data) {
+	$http.get('/heroes').success(function(data) {
 		$scope.filteredHero = data;
 	});
 
@@ -21,10 +21,21 @@ app.controller( 'AllController', [ '$rootScope', '$http', '$scope', '$location',
 		}else {
 			this.person.flagged = true;
 		}
+
+		$http.put( '/heroes', $scope.filteredHero ).then( function ( data ) {
+			console.log( data );
+		} )
 	}
 
 	$scope.isActive = function ( route ) {
-		return route === $location.path();
+		var path = $location.path()
+		if( path === '/' ) {
+			path = '/all'
+		} else {
+
+		}
+		// console.log(route)
+		return route === path;
 	}
 } ] );
 
