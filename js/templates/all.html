@@ -1,42 +1,38 @@
-<input type="text" ng-model='searchInput' placeholder="Search">
-<button id='show-modal'>Add!</button>
-<div id="tabs">
-	<ul>
-		<li ng-class="{true : 'active', false : ''}[isActive('/all') == true]"> <a href="#all"> <span> All </span> </a> </li>
-		<li ng-class="{true : 'active', false : ''}[isActive('/favorites') == true]"> <a href="#favorites"> <span> Favorite </span> </a> </li>
-		<li ng-class="{true : 'active', false : ''}[isActive('/non-favorites') == true]"> <a href="#non-favorites"> <span> Non-Favorite </span> </a> </li>
-	</ul>
+
+<div class="container">
+	<div class="row">
+		<div class="col-lg-2"></div>
+
+		  <div class="col-lg-6" id="filter-input">
+		    <input type="text" class="form-control" placeholder="Filter" ng-model="searchInput">
+		  </div><!-- /.col-lg-6 -->
+
+		<div class="col-lg-4"></div>
+
+	</div>
+
+	<div class="row">
+		<div class="col-lg-2"></div>
+		<div class="col-lg-8">
+			<div class="list-group" id="hero-list">
+
+			  <a href="#/hero/{{person.id}}" class="list-group-item" ng-repeat='person in filteredHero | filter:searchInput'>
+				<img ng-src="{{person.imgUrl}}" alt="..." class="img-circle">
+				<div class="quick-info">
+					<h4 class="list-group-item-heading">{{person.heroName}}</h4>
+			   		 <p class="list-group-item-text">{{person.firstName}} {{person.lastName}}</p>
+				</div>
+				<div class="fave pull-right">
+					<div class="btn-group" data-toggle="buttons">
+					  <label class="btn btn-primary" >
+					    <input type="checkbox">Favorite
+					  </label>
+					</div>
+				</div>
+			  </a>
+
+			</div>
+		</div>
+		<div class="col-lg-2"></div>
+	</div>
 </div>
-
-<ul id="cards-container">
-	<li class='profile-card' ng-repeat='person in filteredHero | filter:searchInput'>
-		<div id='profile' class='col-2'><img ng-src="{{person.imgUrl}}" alt=""></div>
-		<div id="profile-contents" class='col-5'>
-			<table>
-				<tbody>
-					<tr>
-						<td>First Name :</td>
-						<td>{{person.firstName}}</td>
-					</tr>
-					<tr>
-						<td>Last Name :</td>
-						<td>{{person.lastName}}</td>
-					</tr>
-					<tr>
-						<td>Hero Name :</td>
-						<td>{{person.heroName}}</td>
-					</tr>
-				</tbody>
-			</table>
-
-		</div>
-		<div id='fave-icon' class='col-2' >
-
-			<!-- <a href=""> -->
-				<i class="fa fa-star" ng-class="{true : 'isFave', false : ''}[person.flagged==true]" ng-click='toggleFave()'></i>
-			<!-- </a> -->
-			<a href="#/hero/{{person.id}}" class="btn-active">View!</a>
-		</div>
-
-	</li>
-</ul>
