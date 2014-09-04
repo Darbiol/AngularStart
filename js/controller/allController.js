@@ -1,41 +1,79 @@
-app.controller( 'AllController', [ '$rootScope', '$http', '$scope', '$location',  function ( $rootScope, $http, $scope, $location ) {
+app.controller( 'AllController', [ '$scope', '$http',  function (  $scope, $http ) {
 
 	$http.get('/heroes').success(function(data) {
 		$scope.filteredHero = data;
 	});
 
+	$scope.showModal = 'false';
+	$scope.isCreating = false;
+	$scope.isEditing = false;
+	$scope.ModelTitle = null;
 
-	$rootScope.addNew = function () {
-		if ( $rootScope.newPerson != null && $rootScope.newPerson != "" ) {
-			$rootScope.people.push( {
-				'id' : $rootScope.people.length,
-				'name' : $rootScope.newPerson,
-				'flagged' : true,
-				'Powers' : []
-			} );
-		}
-	}
-	$rootScope.toggleFave = function () {
-		if ( this.person.flagged ) {
-			this.person.flagged = false;
-		}else {
-			this.person.flagged = true;
-		}
+	// Checkings
+	$scope.startCreating = function () {
+		$scope.isCreating = true;
+		$scope.isEditing = false;
+		$scope.ModelTitle = "Add Hero!"
 
-		$http.put( '/heroes', $scope.filteredHero ).then( function ( data ) {
-			console.log( data );
-		} )
 	}
 
-	$scope.isActive = function ( route ) {
-		var path = $location.path()
-		if( path === '/' ) {
-			path = '/all'
+	$scope.startEditing = function ( $event ) {
+		$event.preventDefault();
+
+		$scope.isCreating = false;
+		$scope.isEditing = true;
+		$scope.ModelTitle = "Edit Hero"
+	}
+
+	$scope.cancelCreateEdit = function () {
+		$scope.isCreating = false;
+		$scope.isEditing = false;
+
+		resetForm();
+	}
+
+	$scope.cancelEdit = function () {
+		$scope.isEditing = false;
+		resetForm();
+	}
+
+	$scope.submitHero = function ( hero ) {
+		var now = undefined;
+
+		hero.id      = now | 69;
+		hero.imgUrl  = '/resources/img/default-img.jpg';
+
+		hero.flagged = false;
+		$scope.filteredHero.push( hero );
+		console.log(hero)
+		resetForm();
+	}
+
+	function resetForm () {
+		$scope.hero = {
+			'heroName'  : '',
+			'firstName' : '',
+			'lastName'  : '',
+			'flagged'   : false
+		}
+	}
+
+	$scope.toggleFave = function ( $event, person ) {
+		$event.stopPropagation();
+		console.log(person)
+		if ( person.flagged ) {
+			person.flagged = false;
 		} else {
-
+			person.flagged = true;
 		}
-		// console.log(route)
-		return route === path;
+		console.log($scope.filteredHero)
+
 	}
+
+	// ============================ //
+	//      CRUD                   //
+	// =========================== //
+
+	console.log($scope)
 } ] );
 
