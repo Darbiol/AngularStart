@@ -38,9 +38,9 @@ app.controller( 'AllController', [ '$scope', '$http',  function (  $scope, $http
 	}
 
 	$scope.submitHero = function ( hero ) {
-		var now = undefined;
+		var now = new Date();
 
-		hero.id      = now | 69;
+		hero.id      = hashIt(now);
 		hero.imgUrl  = '/resources/img/default-img.jpg';
 
 		hero.flagged = false;
@@ -56,6 +56,10 @@ app.controller( 'AllController', [ '$scope', '$http',  function (  $scope, $http
 			'lastName'  : '',
 			'flagged'   : false
 		}
+	}
+
+	function hashIt ( string ) {
+		return (string^69);
 	}
 
 	$scope.toggleFave = function ( $event, person ) {
