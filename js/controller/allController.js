@@ -1,13 +1,14 @@
-app.controller( 'AllController', [ '$scope', '$http',  function (  $scope, $http ) {
+app.controller( 'AllController', [ '$scope', '$http', 'heroQueryFactory', function (  $scope, $http, heroQuery ) {
 
-	$http.get('/heroes').success(function(data) {
-		$scope.filteredHero = data;
-	});
+	// $http.get('/heroes').success(function(data) {
+	// 	$scope.filteredHero = data;
+	// });
 
 	$scope.showModal = 'false';
 	$scope.isCreating = false;
 	$scope.isEditing = false;
 	$scope.ModelTitle = null;
+	$scope.editedHero = null;
 
 	// Checkings
 	$scope.startCreating = function () {
@@ -22,7 +23,8 @@ app.controller( 'AllController', [ '$scope', '$http',  function (  $scope, $http
 
 		$scope.isCreating = false;
 		$scope.isEditing = true;
-		$scope.ModelTitle = "Edit Hero"
+		$scope.ModelTitle = "Edit Hero";
+
 	}
 
 	$scope.cancelCreateEdit = function () {
@@ -38,14 +40,40 @@ app.controller( 'AllController', [ '$scope', '$http',  function (  $scope, $http
 	}
 
 	$scope.submitHero = function ( hero ) {
+
+		if ( $scope.isCreating && !$scope.isEditing ) {
+			addHero( hero );
+		}else if ( !$scope.isCreating && $scope.isEditing ){
+			updateHero( hero );
+		}
+		$('#heroModal').modal('hide');
+	}
+
+
+
+	$scope.setEditValues = function ( hero ) {
+		$scope.hero = angular.copy( hero );
+	}
+
+	function addHero( newHero ) {
 		var now = new Date();
 
-		hero.id      = hashIt(now);
-		hero.imgUrl  = '/resources/img/default-img.jpg';
+		newHero.id      = hashIt(now);
+		newHero.imgUrl  = '/resources/img/default-img.jpg';
+		newHero.flagged = false;
+		$scope.filteredHero.push( newHero );
+		resetForm();
+	}
 
-		hero.flagged = false;
-		$scope.filteredHero.push( hero );
-		console.log(hero)
+	function updateHero( hero ) {
+		// console.log($scope.hero)
+		var index = _.findIndex( $scope.filteredHero, function ( i ) {
+			console.log(i)
+			return i.id == hero.id;
+		} )
+		console.log( index );
+		$scope.filteredHero[index] = hero;
+		$scope.isEditing = false;
 		resetForm();
 	}
 
@@ -56,22 +84,40 @@ app.controller( 'AllController', [ '$scope', '$http',  function (  $scope, $http
 			'lastName'  : '',
 			'flagged'   : false
 		}
+
 	}
 
-	function hashIt ( string ) {
-		return (string^69);
+	function hashIt ( date ) {
+		var keyCode = 'GaBzO0123o'
+
+		var dateParsed = ( Date.parse( date ) ).toString();
+		console.log(dateParsed.length)
+		var id = null;
+		for( var i=0 ; i<dateParsed.length ; i++ ) {
+			console.log('dasds');
+			if ( id ) {
+				id += keyCode[ dateParsed[ i ] ];
+			} else {
+				id = keyCode[ dateParsed[ i ] ];
+			}
+		}
+		return id;
 	}
 
 	$scope.toggleFave = function ( $event, person ) {
-		$event.stopPropagation();
-		console.log(person)
+		$event.preventDefault();
 		if ( person.flagged ) {
 			person.flagged = false;
 		} else {
 			person.flagged = true;
 		}
-		console.log($scope.filteredHero)
+		console.log(person);
+		var index = _.findIndex( $scope.filteredHero, function ( i ) {
+			return i.id == person.id;
+		} )
 
+		$scope.filteredHero[index] = person;
+		console.log( $scope.filteredHero[0] );
 	}
 
 	// ============================ //

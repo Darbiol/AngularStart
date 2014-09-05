@@ -1,1 +1,151 @@
-[{"id":0,"firstName":"Bruce","lastName":"Wayne","heroName":"Batman","flagged":true,"imgUrl":"/resources/img/0/image_001.jpg"},{"id":1,"firstName":"Diana","lastName":"of Themyscira","heroName":"Wonderwoman","flagged":true,"imgUrl":"/resources/img/1/image_001.jpg"},{"id":2,"firstName":"Barry","lastName":"Allen","heroName":"Flash","flagged":true,"imgUrl":"/resources/img/2/image_001.jpg"},{"id":3,"firstName":"Clark","lastName":"Kent","heroName":"Superman","flagged":false,"imgUrl":"/resources/img/3/image_001.jpg"},{"id":4,"firstName":"Hal","lastName":"Jordan","heroName":"Green Lantern","flagged":false,"imgUrl":"/resources/img/4/image_001.jpg"}]
+[
+	{
+		"id"        : 0,
+		"firstName" : "Bruce",
+		"lastName"  : "Wayne",
+		"heroName"  : "Batman",
+		"flagged"   : true,
+		"imgUrl"    : "/resources/img/0/image_001.jpg",
+		"info"      :
+			[
+				{
+					"FirstName"  : "Bruce",
+					"LastName"   : "Wayne",
+					"HeroName"   : "Batman",
+					"Born"       : "February 19, 1939",
+					"Species"    : "Human",
+					"Email"      : "true.blood69@dccomics.com",
+					"Abilities"  : "Batman has no inherent superhuman powers. To compensate for this, he relies on \"his own scientific knowledge, detective skills, and athletic prowess.\"",
+					"Origin"     : "Bruce Wayne is born to Dr. Thomas Wayne and his wife Martha, two very wealthy and charitable Gotham City socialites. Bruce is brought up in Wayne Manor, and leads a happy and privileged existence until the age of eight, when his parents are killed by a small-time criminal named Joe Chill while on their way home from a movie theater. That night, Bruce Wayne swears an oath to spend his life fighting crime. He engages in intense intellectual and physical training; however, he realizes that these skills alone would not be enough. \"Criminals are a superstitious cowardly lot,\" Wayne remarks, \"so my disguise must be able to strike terror into their hearts. I must be a creature of the night, black, terrible...\" As if responding to his desires, a bat suddenly flies through the window, inspiring Bruce to take on the persona of Batman.",
+					"imageUrl"   : [
+						"/resources/img/0/image_001.jpg",
+						"/resources/img/0/image_002.jpg",
+						"/resources/img/0/image_003.jpg",
+						"/resources/img/0/image_004.jpg",
+						"/resources/img/0/image_005.jpg"
+					]
+				}
+			]
+	},
+	{
+		"id":1,
+		"firstName" : "Diana",
+		"lastName"  : "of Themyscira",
+		"heroName"  : "Wonderwoman",
+		"flagged"   : true,
+		"imgUrl"    : "/resources/img/1/image_001.jpg",
+		"info"      :
+			[
+				{
+					"FirstName"  : "Dian",
+					"LastName"   : "Prince",
+					"HeroName"   : "Wonder Woman",
+					"Born"       : "February 19, 1939",
+					"Species"    : "Demigod",
+					"Email"      : "xena_rox@dccomics.com",
+					"Abilities"  : "Diana is depicted as a masterful athlete, acrobat, fighter and strategist, trained and experienced in many ancient and modern forms of armed and unarmed combat, including exclusively Amazonian martial arts. In some versions, her mother trained her, as Wonder Girl, for a future career as Wonder Woman. From the beginning, she is portrayed as highly skilled in using her Amazon bracelets to stop bullets and in wielding her golden lasso.",
+					"Origin"     : "Diana is the daughter of Queen Hippolyta, the first child born on Paradise Island in the three thousand year history that the immortal Amazons lived there. The Amazons had been created around 1200 B.C. when the Greek goddesses drew forth the souls of all women who had been murdered by men. One soul was left behind, the one that would be born as Diana. That soul originally belonged to the unborn daughter of the first woman murdered by a man (whom Hippolyta was the reincarnation of). In the late 20th Century, Hippolyta was instructed to mold some clay from the shores of Paradise Island into the form of a baby girl. Six members of the Greek Pantheon then bonded the soul to the clay, giving it life. Each of the six also granted Diana a gift: Demeter, great strength; Athena, wisdom and courage; Artemis, a hunter's heart and a communion with animals; Aphrodite, beauty and a loving heart; Hestia, sisterhood with fire; Hermes, speed and the power of flight. Diana grew up surrounded by a legion of sisters and mothers. When she was a young woman, the gods decreed that the Amazons must send an emissary into Man's World. Queen Hippolyta ordered a contest to be held, but forbade Diana from participating. Diana disobeyed and did so anyway in disguise, easily winning the contest and being named the Amazon's champion. She was given a uniform fashioned from the standard of someone who had visited the island a few decades earlier.",
+					"profileImg" : "/resources/img/1/image_008.jpg",
+					"imageUrl"   : [
+						"/resources/img/1/image_001.jpg",
+						"/resources/img/1/image_002.jpg",
+						"/resources/img/1/image_003.jpg",
+						"/resources/img/1/image_004.jpg",
+						"/resources/img/1/image_005.jpg",
+						"/resources/img/1/image_006.jpg",
+						"/resources/img/1/image_007.jpg",
+						"/resources/img/1/image_008.jpg"
+					]
+				}
+			]
+	},
+	{
+		"id"        : 2,
+		"firstName" : "Barry",
+		"lastName"  : "Allen",
+		"heroName"  : "Flash",
+		"flagged"   : true,
+		"imgUrl"    : "/resources/img/2/image_001.jpg",
+		"info"      :
+			[
+				{
+					"FirstName"  : "Barry",
+					"LastName"   : "Allen",
+					"HeroName"   : "Flash",
+					"Born"       : "February 19, 1939",
+					"Species"    : "Human",
+					"Email"      : "lightning_mcQueen@dccomics.com",
+					"Abilities"  : "Super Speed",
+					"Origin"     : "a police scientist who has a reputation for being very slow, deliberate, and frequently late, which frustrated his fiancée, Iris West. One night, as he was preparing to leave work, a lightning bolt shattered a case full of chemicals and spilled them all over Allen. As a result, Allen found that he could run extremely fast and had matching reflexes. He donned a set of red tights sporting a lightning bolt, dubbed himself the Flash (after his childhood hero, Jay Garrick), and became a crimefighter active in Central City. In his civilian identity, he stores the costume compressed in a special ring via the use of a special gas that could compress cloth fibers to a very small fraction of their normal size.",
+					"profileImg" : "/resources/img/2/image_002.jpg",
+					"imageUrl"   : [
+						"/resources/img/2/image_001.jpg",
+						"/resources/img/2/image_002.jpg",
+						"/resources/img/2/image_003.jpg",
+						"/resources/img/2/image_004.jpg",
+						"/resources/img/2/image_005.jpg",
+						"/resources/img/2/image_006.jpg"
+					]
+				}
+			]
+	},
+	{
+		"id"        : 3,
+		"firstName" : "Clark",
+		"lastName"  : "Kent",
+		"heroName"  : "Superman",
+		"flagged"   : false,
+		"imgUrl"    : "/resources/img/3/image_001.jpg",
+		"info"      :
+			[
+				{
+					"FirstName"  : "Clark",
+					"LastName"   : "Kent",
+					"HeroName"   : "Superman",
+					"Born"       : "February 19, 1939",
+					"Species"    : "Kryptonian",
+					"Email"      : "man0steel@dccomics.com",
+					"Abilities"  : "Superhuman strength, speed, hearing, longevity, stamina, Invulnerability, Flight, Freezing breath, Multiple extrasensory and vision powers, Healing factor",
+					"Origin"     : "he was born Kal-El on the planet Krypton, before being rocketed to Earth as an infant by his scientist father Jor-El, moments before Krypton's destruction. Discovered and adopted by a Kansas farmer and his wife, the child is raised as Clark Kent and imbued with a strong moral compass. Very early on he started to display superhuman abilities, which, upon reaching maturity, he resolved to use for the benefit of humanity. Superman resides and operates in the fictional American city of Metropolis. As Clark Kent, he is a journalist for the Daily Planet, a Metropolis newspaper. Superman's primary love interest is Lois Lane and his archenemy is supervillain Lex Luthor.",
+					"profileImg" : "/resources/img/3/image_007.jpg",
+					"imageUrl"   : [
+						"/resources/img/3/image_001.jpg",
+						"/resources/img/3/image_002.jpg",
+						"/resources/img/3/image_003.jpg",
+						"/resources/img/3/image_004.jpg",
+						"/resources/img/3/image_005.jpg",
+						"/resources/img/3/image_006.jpg",
+						"/resources/img/3/image_007.jpg"
+					]
+				}
+			]
+	},
+	{
+		"id"        : 4,
+		"firstName" : "Hal",
+		"lastName"  : "Jordan",
+		"heroName"  : "Green Lantern",
+		"flagged"   : false,
+		"imgUrl"    : "/resources/img/4/image_001.jpg",
+		"info"      :
+			[
+				{
+					"FirstName"  : "Hal",
+					"LastName"   : "Jordan",
+					"HeroName"   : "Green Lantern",
+					"Born"       : "February 19, 1939",
+					"Species"    : "Human",
+					"Email"      : "flash_light@dccomics.com",
+					"Abilities"  : " conjure \"constructs\": solid green objects that the Green Lantern can control telekinetically, power of flight and that all its effects are accompanied by a green light",
+					"Origin"     : " Harold \"Hal\" Jordan was a second-generation test pilot, having followed in the footsteps of his father, Hal Jordan. He was given the power ring and battery (lantern) by a dying alien named Abin Sur, whose spaceship crashed on Earth. Abin Sur used his ring to seek out an individual who was \"utterly honest and born without fear\" to take his place as a member of the corps. At one point, when Hal Jordan was incapacitated, it was revealed that there were two individuals matching the specified criteria on Earth, the other being Guy Gardner, and the ring chose Jordan solely because of his proximity to Abin Sur. Gardner then became listed as Hal's \"backup\", in case there was an instance in which Jordan was unavailable or otherwise incapacitated. Later, when Gardner was put into a coma, it turned out that by then there was a third human suitable for the task, John Stewart, who was designated as the Earth Sector's \"backup\" Lantern. Jordan, as Green Lantern, became a founding member of the Justice League of America and as of the mid-2000s is, along with John Stewart, one of the two active-duty Lanterns in Earth's sector of space.",
+					"profileImg" : "/resources/img/4/image_001.jpg",
+					"imageUrl"   : [
+						"/resources/img/4/image_001.jpg",
+						"/resources/img/4/image_002.jpg",
+						"/resources/img/4/image_003.jpg",
+						"/resources/img/4/image_004.jpg"
+					]
+				}
+			]
+	}
+]

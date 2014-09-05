@@ -25,11 +25,11 @@
 					 <p class="list-group-item-text">{{person.firstName}} {{person.lastName}}</p>
 				</div>
 				<div class="tools pull-right">
-					<div class="btn-group" data-toggle="buttons">
-					  <label class="btn btn-warning" ng-class="{ true : 'active', false : '' }[ person.flagged == true ]" ng-click="toggleFave($event, person)" >
-					    <input type="checkbox"><i class="glyphicon glyphicon-star"></i>
-					  </label>
-					  <button class="btn btn-primary" ng-click="startEditing($event)" data-toggle="modal" data-target="#heroModal"> <i class="glyphicon glyphicon-pencil"></i> Edit</button>
+					<div class="btn-group">
+						<button class="btn btn-default" ng-class="{true : 'active', false : 'norm'}[person.flagged==true]" ng-click="toggleFave($event, person)">
+							<i class="glyphicon glyphicon-star"></i>
+						</button>
+						<button class="btn btn-primary" ng-click="setEditValues(person);startEditing($event)" data-toggle="modal" data-target="#heroModal"> <i class="glyphicon glyphicon-pencil"></i> Edit</button>
 
 					</div>
 				</div>
@@ -75,7 +75,7 @@
       </div>
       <div class="modal-footer">
         <button type="button" class="btn btn-default" data-dismiss="modal" ng-click="cancelCreateEdit()">Close</button>
-        <button type="submit" class="btn btn-primary">Save!</button>
+        <button type="submit" class="btn btn-primary" >Save!</button>
       </div>
     </form>
     </div><!-- /.modal-content -->
