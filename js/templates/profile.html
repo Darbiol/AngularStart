@@ -1,63 +1,98 @@
-<div class="container" ng-repeat='hero in person'>
-	<div class="col-2 left">
-		<div id="img-container">
-			<img ng-src="{{hero.profileImg}}" alt="">
-		</div>
-
-	</div>
-	<div class="col-3 left bound">
-		<div class="profile-header">
-			<h2>{{hero.HeroName}}</h2>
-		</div>
-		<div class='profile-details'>
-			<table>
-				<tbody>
-					<tr>
-						<td> First Name : </td>
-						<td> {{hero.FirstName}} </td>
-					</tr>
-					<tr>
-						<td> Last Name : </td>
-						<td> {{hero.LastName}} </td>
-					</tr>
-					<tr>
-						<td> Date Of Birth : </td>
-						<td> {{hero.Born}} </td>
-					</tr>
-					<tr>
-						<td> Species : </td>
-						<td> {{hero.Species}} </td>
-					</tr>
-					<tr>
-						<td> Contact : </td>
-						<td>  {{hero.Email}}  </td>
-					</tr>
-					<tr>
-						<td> Abilities : </td>
-						<td> <p>{{hero.Abilities}}</p>  </td>
-					</tr>
-					<tr>
-						<td> Origins : </td>
-						<td> <p>{{hero.Origin}}</p>  </td>
-					</tr>
-				</tbody>
-			</table>
-		</div>
-
-	</div>
-	<div class="col-4 left">
-
-		<div id="selected-image">
-			<div class="img-show">
-				<img ng-src="{{selectedImage}}" alt="">
+<div class="container">
+	<div class="row">
+		<div class="col-lg-7">
+			<div id="profile-card">
+				<div class="profile-cover"></div>
+				<div class="profile-img"></div>
+				<div class="quick-profile-info"></div>
+			</div>
+			<div id="additional-info"></div>
+			<div id="comment-section">
+				<div class="comment"></div>
+				<div class="comments"></div>
 			</div>
 		</div>
-		<div id="image-list">
-			<ul >
-				<li ng-repeat='images in hero.imageUrl'>
-					<a href=""><img ng-src="{{images}}" ng-click="setImage( images )" alt=""></a>
-				</li>
-			</ul>
+		<div class="col-lg-5">
+			<div id="main-info">
+				<div class="user-img">
+					<h2>Batman's Photos(12)</h2>
+					<div class="selected-img">
+						<img src="/resources/img/default-img.jpg" alt="">
+					</div>
+
+					<ul class="user-img-list">
+						<li>
+							<img src="/resources/img/default-img.jpg" alt="">
+						</li>
+						<li>
+							<img src="/resources/img/default-img.jpg" alt="">
+						</li>
+						<li>
+							<img src="/resources/img/default-img.jpg" alt="">
+						</li>
+						<li>
+							<img src="/resources/img/default-img.jpg" alt="">
+						</li>
+						<li>
+							<img src="/resources/img/default-img.jpg" alt="">
+						</li>
+						<li>
+							<img src="/resources/img/default-img.jpg" alt="">
+						</li>
+						<li>
+							<img src="/resources/img/default-img.jpg" alt="">
+						</li>
+						<li>
+							<img src="/resources/img/default-img.jpg" alt="">
+						</li>
+						<li>
+							<img src="/resources/img/default-img.jpg" alt="">
+						</li>
+						<li>
+							<img src="/resources/img/default-img.jpg" alt="">
+						</li>
+					</ul>
+				</div>
+				<div class="user-info">
+					<table class="table table-responsive">
+						<thead>
+							<tr class="info">
+								<td>
+									<h4>About Batman</h4>
+								</td>
+								<td></td>
+							</tr>
+						</thead>
+						<tbody>
+							<tr>
+								<td>Hero Name :</td>
+								<td>asd</td>
+							</tr>
+							<tr>
+								<td>First Name :</td>
+								<td>asd</td>
+							</tr>
+							<tr>
+								<td>Last Name :</td>
+								<td>asd</td>
+							</tr>
+							<tr>
+								<td>Birth date :</td>
+								<td>asd</td>
+							</tr>
+							<tr>
+								<td>Species :</td>
+								<td>asd</td>
+							</tr>
+							<tr>
+								<td>Email Address:</td>
+								<td>asd</td>
+							</tr>
+						</tbody>
+					</table>
+				</div>
+			</div>
 		</div>
 	</div>
+
 </div>

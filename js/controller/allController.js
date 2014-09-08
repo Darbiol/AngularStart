@@ -4,6 +4,10 @@ app.controller( 'AllController', [ '$scope', '$http', 'heroQueryFactory', functi
 	// 	$scope.filteredHero = data;
 	// });
 
+	heroQuery.getHeroes( function ( heroes ) {
+		$scope.filteredHero = heroes;
+	} );
+
 	$scope.showModal = 'false';
 	$scope.isCreating = false;
 	$scope.isEditing = false;
@@ -61,20 +65,29 @@ app.controller( 'AllController', [ '$scope', '$http', 'heroQueryFactory', functi
 		newHero.id      = hashIt(now);
 		newHero.imgUrl  = '/resources/img/default-img.jpg';
 		newHero.flagged = false;
-		$scope.filteredHero.push( newHero );
+		heroQuery.addHero( newHero );
+		//$scope.filteredHero.push( newHero );
+		console.log( $scope.filteredHero )
 		resetForm();
 	}
 
 	function updateHero( hero ) {
 		// console.log($scope.hero)
-		var index = _.findIndex( $scope.filteredHero, function ( i ) {
-			console.log(i)
-			return i.id == hero.id;
-		} )
-		console.log( index );
-		$scope.filteredHero[index] = hero;
+		// var index = _.findIndex( $scope.filteredHero, function ( i ) {
+		// 	console.log(i)
+		// 	return i.id == hero.id;
+		// } )
+		// console.log( index );
+		// $scope.filteredHero[index] = hero;
+		heroQuery.setHero( hero );
 		$scope.isEditing = false;
 		resetForm();
+	}
+
+	$scope.removeHero = function ( $event, hero ) {
+		$event.preventDefault();	
+		console.log(hero.id);
+		heroQuery.deleteHero( hero );
 	}
 
 	function resetForm () {
@@ -124,6 +137,5 @@ app.controller( 'AllController', [ '$scope', '$http', 'heroQueryFactory', functi
 	//      CRUD                   //
 	// =========================== //
 
-	console.log($scope)
 } ] );
 

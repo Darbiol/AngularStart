@@ -16,8 +16,9 @@
 	<div class="row">
 		<div class="col-lg-2"></div>
 		<div class="col-lg-8">
-			<div class="list-group" id="hero-list">
 
+			<div class="list-group" id="hero-list">
+			
 			  <a href="#/hero/{{person.id}}" class="list-group-item" ng-repeat='person in filteredHero | filter:searchInput'>
 				<img ng-src="{{person.imgUrl}}" alt="..." class="img-circle">
 				<div class="quick-info">
@@ -25,6 +26,7 @@
 					 <p class="list-group-item-text">{{person.firstName}} {{person.lastName}}</p>
 				</div>
 				<div class="tools pull-right">
+        			<button type="button" class="close" ng-click="removeHero($event, person)" ><span aria-hidden="true">&times;</span><span class="sr-only">Close</span></button>
 					<div class="btn-group">
 						<button class="btn btn-default" ng-class="{true : 'active', false : 'norm'}[person.flagged==true]" ng-click="toggleFave($event, person)">
 							<i class="glyphicon glyphicon-star"></i>
