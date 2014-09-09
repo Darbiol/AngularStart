@@ -2,59 +2,122 @@
 	<div class="row">
 		<div class="col-lg-7">
 			<div id="profile-card">
-				<div class="profile-cover"></div>
-				<div class="profile-img"></div>
+
+				<div class="profile-cover">
+					<img src="/resources/img/default-cover.jpg" alt="">
+				</div>
+
+				<div class="profile">
+
+					<div class="overlay-bg"></div>
+
+					<div class="wrapper">
+						<div class="profile-img">
+							<img ng-src="{{person.imgUrl}}" alt="">
+						</div>
+						<div class="profile-name">
+							<h1>{{person.firstName}} {{person.lastName}} </h1>
+							<h4> {{person.heroName}} </h4>
+							<p> <i class="glyphicon glyphicon-map-marker" ></i> {{person.Location}} </p>
+						</div>
+					</div>
+
+				</div>
+
 				<div class="quick-profile-info"></div>
 			</div>
-			<div id="additional-info"></div>
+			<div id="additional-info">
+				<div class="content" ng-repeat="additional in person.info">
+					<h1>Additional Info</h1>
+					<h3>Origins</h3>
+					<p> {{additional.Origin}} </p>
+				</div>
+
+			</div>
 			<div id="comment-section">
-				<div class="comment"></div>
-				<div class="comments"></div>
+				<div class="comment">
+					<h3>Comment on the Hero</h3>
+					<textarea name="" id="" cols="30" rows="5" placeholder="Write Something here."></textarea>
+					<button class="btn btn-success" >Post Comment</button>
+				</div>
+				<div class="comments">
+					<ul ng-repeat="heroInformation in person.info">
+						<li ng-repeat="comments in heroInformation.comments">
+							<h4 class="commentor-name">{{comments.commentor}}</h4>
+							<div class="comment-date"><i class="glyphicon glyphicon-time"></i> posted a few seconds ago</div>
+							<div class="comment-message">Lorem ipsum dolor sit amet, consectetur adipisicing elit. Debitis voluptates necessitatibus sapiente quasi, laboriosam. Nobis quod deserunt tempore doloribus molestiae quia ab nostrum minima cumque hic. Quasi, maiores aut facere.</div>
+							<div class="comment-tools">
+								<span class="upvotes">56</span>
+								<a>
+									<i class="glyphicon glyphicon-hand-up"></i>
+									Upvote!
+
+								</a>
+							</div>
+						</li>
+
+
+						<li>
+							<h4 class="commentor-name">Guest</h4>
+							<div class="comment-date"><i class="glyphicon glyphicon-time"></i> posted a few seconds ago</div>
+							<div class="comment-message">Lorem ipsum dolor sit amet, consectetur adipisicing elit. Debitis voluptates necessitatibus sapiente quasi, laboriosam. Nobis quod deserunt tempore doloribus molestiae quia ab nostrum minima cumque hic. Quasi, maiores aut facere.</div>
+							<div class="comment-tools">
+								<span class="upvotes">56</span>
+								<a>
+									<i class="glyphicon glyphicon-hand-up"></i>
+									Upvote!
+
+								</a>
+							</div>
+						</li>
+						<li>
+							<h4 class="commentor-name">Guest</h4>
+							<div class="comment-date"><i class="glyphicon glyphicon-time"></i> posted a few seconds ago</div>
+							<div class="comment-message">Lorem ipsum dolor sit amet, consectetur adipisicing elit. Debitis voluptates necessitatibus sapiente quasi, laboriosam. Nobis quod deserunt tempore doloribus molestiae quia ab nostrum minima cumque hic. Quasi, maiores aut facere.</div>
+							<div class="comment-tools">
+								<span class="upvotes">56</span>
+								<a>
+									<i class="glyphicon glyphicon-hand-up"></i>
+									Upvote!
+
+								</a>
+							</div>
+						</li>
+						<li>
+							<h4 class="commentor-name">Guest</h4>
+							<div class="comment-date"><i class="glyphicon glyphicon-time"></i> posted a few seconds ago</div>
+							<div class="comment-message">Lorem ipsum dolor sit amet, consectetur adipisicing elit. Debitis voluptates necessitatibus sapiente quasi, laboriosam. Nobis quod deserunt tempore doloribus molestiae quia ab nostrum minima cumque hic. Quasi, maiores aut facere.</div>
+							<div class="comment-tools">
+								<span class="upvotes">56</span>
+								<a>
+									<i class="glyphicon glyphicon-hand-up"></i>
+									Upvote!
+
+								</a>
+							</div>
+						</li>
+						<li>
+							<h4 class="commentor-name">Announyouse</h4>
+							<div class="comment-date"><i class="glyphicon glyphicon-time"></i> posted a few seconds ago</div>
+							<div class="comment-message">Lorem ipsum dolor sit amet, consectetur adipisicing elit. Debitis voluptates necessitatibus sapiente quasi, laboriosam. Nobis quod deserunt tempore doloribus molestiae quia ab nostrum minima cumque hic. Quasi, maiores aut facere.</div>
+							<div class="comment-tools">
+								<span class="upvotes">56</span>
+								<a>
+									<i class="glyphicon glyphicon-hand-up"></i>
+									Upvote!
+
+								</a>
+							</div>
+						</li>
+						<li>Comment2</li>
+					</ul>
+				</div>
 			</div>
 		</div>
 		<div class="col-lg-5">
 			<div id="main-info">
-				<div class="user-img">
-					<h2>Batman's Photos(12)</h2>
-					<div class="selected-img">
-						<img src="/resources/img/default-img.jpg" alt="">
-					</div>
-
-					<ul class="user-img-list">
-						<li>
-							<img src="/resources/img/default-img.jpg" alt="">
-						</li>
-						<li>
-							<img src="/resources/img/default-img.jpg" alt="">
-						</li>
-						<li>
-							<img src="/resources/img/default-img.jpg" alt="">
-						</li>
-						<li>
-							<img src="/resources/img/default-img.jpg" alt="">
-						</li>
-						<li>
-							<img src="/resources/img/default-img.jpg" alt="">
-						</li>
-						<li>
-							<img src="/resources/img/default-img.jpg" alt="">
-						</li>
-						<li>
-							<img src="/resources/img/default-img.jpg" alt="">
-						</li>
-						<li>
-							<img src="/resources/img/default-img.jpg" alt="">
-						</li>
-						<li>
-							<img src="/resources/img/default-img.jpg" alt="">
-						</li>
-						<li>
-							<img src="/resources/img/default-img.jpg" alt="">
-						</li>
-					</ul>
-				</div>
 				<div class="user-info">
-					<table class="table table-responsive">
+					<table class="table table-responsive" ng-repeat="info in person.info">
 						<thead>
 							<tr class="info">
 								<td>
@@ -66,31 +129,44 @@
 						<tbody>
 							<tr>
 								<td>Hero Name :</td>
-								<td>asd</td>
+								<td>{{person.heroName}}</td>
 							</tr>
 							<tr>
 								<td>First Name :</td>
-								<td>asd</td>
+								<td>{{person.firstName}}</td>
 							</tr>
 							<tr>
 								<td>Last Name :</td>
-								<td>asd</td>
+								<td>{{person.lastName}}</td>
 							</tr>
 							<tr>
 								<td>Birth date :</td>
-								<td>asd</td>
+								<td>{{info.Born}}</td>
 							</tr>
 							<tr>
 								<td>Species :</td>
-								<td>asd</td>
+								<td>{{info.Species}}</td>
 							</tr>
 							<tr>
 								<td>Email Address:</td>
-								<td>asd</td>
+								<td>{{info.Email}}</td>
 							</tr>
 						</tbody>
 					</table>
 				</div>
+				<div class="user-img">
+					<h2>{{person.heroName}}'s Photos ( {{photosLen}} )</h2>
+					<div class="selected-img">
+						<img ng-src="{{selectedImage}}" alt="">
+					</div>
+
+					<ul class="user-img-list" ng-repeat="heroInfo in person.info">
+						<li ng-repeat="photos in heroInfo.imageUrl" ng-click="setImage(photos)">
+							<img ng-src="{{photos}}" alt="">
+						</li>
+					</ul>
+				</div>
+
 			</div>
 		</div>
 	</div>

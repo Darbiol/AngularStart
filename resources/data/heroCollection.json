@@ -6,6 +6,7 @@
 		"heroName"  : "Batman",
 		"flagged"   : true,
 		"imgUrl"    : "/resources/img/0/image_001.jpg",
+		"Location"  : "Gotham City",
 		"info"      :
 			[
 				{
@@ -25,6 +26,30 @@
 						"/resources/img/0/image_005.jpg"
 					]
 				}
+			],
+		"comments" :
+			[
+				{
+					"commentor"      : "Catwoman",
+					"dateCommented"  : "December 12, 2010",
+					"commentMessage" : "Lorem ipsum dolor sit amet, consectetur adipisicing elit. Distinctio quia, iste nostrum voluptate quisquam, aspernatur sint dolorum totam, quidem placeat, voluptatum hic debitis! Quo voluptas deleniti explicabo ad magnam veniam.",
+					"Upvote" : "56"
+
+				},
+				{
+					"commentor"      : "Guest",
+					"dateCommented"  : "December 12, 2010",
+					"commentMessage" : "Lorem ipsum dolor sit amet, consectetur adipisicing elit. Distinctio quia, iste nostrum voluptate quisquam, aspernatur sint dolorum totam, quidem placeat, voluptatum hic debitis! Quo voluptas deleniti explicabo ad magnam veniam.",
+					"Upvote" : "56"
+
+				},
+				{
+					"commentor"      : "Guest",
+					"dateCommented"  : "December 12, 2010",
+					"commentMessage" : "Lorem ipsum dolor sit amet, consectetur adipisicing elit. Distinctio quia, iste nostrum voluptate quisquam, aspernatur sint dolorum totam, quidem placeat, voluptatum hic debitis! Quo voluptas deleniti explicabo ad magnam veniam.",
+					"Upvote" : "56"
+
+				}
 			]
 	},
 	{
@@ -32,6 +57,7 @@
 		"firstName" : "Diana",
 		"lastName"  : "of Themyscira",
 		"heroName"  : "Wonderwoman",
+		"Location"  : "Themyscira",
 		"flagged"   : true,
 		"imgUrl"    : "/resources/img/1/image_001.jpg",
 		"info"      :
@@ -64,6 +90,7 @@
 		"firstName" : "Barry",
 		"lastName"  : "Allen",
 		"heroName"  : "Flash",
+		"Location"  : "Central City",
 		"flagged"   : true,
 		"imgUrl"    : "/resources/img/2/image_001.jpg",
 		"info"      :
@@ -94,6 +121,7 @@
 		"firstName" : "Clark",
 		"lastName"  : "Kent",
 		"heroName"  : "Superman",
+		"Location"  : "Metropolis",
 		"flagged"   : false,
 		"imgUrl"    : "/resources/img/3/image_001.jpg",
 		"info"      :
@@ -125,6 +153,7 @@
 		"firstName" : "Hal",
 		"lastName"  : "Jordan",
 		"heroName"  : "Green Lantern",
+		"Location"  : "Coast City",
 		"flagged"   : false,
 		"imgUrl"    : "/resources/img/4/image_001.jpg",
 		"info"      :

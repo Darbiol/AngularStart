@@ -4,9 +4,11 @@ app.controller( 'ProfileController', [ '$scope', '$routeParams', 'heroQueryFacto
 		$scope.person = hero;
 		$scope.selectedImage = $scope.person.info[0].imageUrl[0]
 		$scope.profileImg = $scope.person.imgUrl
+		$scope.photosLen = $scope.person.info[0].imageUrl.length;
+		console.log($scope);
 	} );
 
-	
+
 
 	// $http.get( 'resources/data/' + $scope.id + '.json' ).success( function ( data ) {
 	// 	console.log(data[0])
@@ -15,6 +17,7 @@ app.controller( 'ProfileController', [ '$scope', '$routeParams', 'heroQueryFacto
 	// } );
 
 	$scope.setImage = function ( imgUrl ) {
+		console.log(imgUrl)
 		$scope.selectedImage = imgUrl;
 	}
 

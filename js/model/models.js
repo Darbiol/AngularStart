@@ -2,8 +2,9 @@ app.factory( 'heroQueryFactory', [ '$http', function ( $http ) {
 	var heroesObj = {};
 	var heroes;
 
-	
+
 	heroesObj.getHeroes = function ( callback ) {
+
 		if ( !heroes ) {
 			$http.get('/heroes').success(function(data) {
 				heroes = data;
@@ -12,8 +13,8 @@ app.factory( 'heroQueryFactory', [ '$http', function ( $http ) {
 		} else {
 			callback( heroes );
 		}
-
 		return heroes;
+
 	}
 
 	heroesObj.getHero = function ( heroId, callback ) {
@@ -25,7 +26,7 @@ app.factory( 'heroQueryFactory', [ '$http', function ( $http ) {
 
 			callback(heroes[index]);
 		} );
-	
+
 	}
 
 	heroesObj.addHero = function ( hero ) {

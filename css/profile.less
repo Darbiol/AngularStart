@@ -1,35 +1,156 @@
 body {
-	background-color: #E6E6E6 !important;
-}	
+	background-color : #E6E6E6 !important;
+}
 
 #profile-card {
-	.profile-cover:before {
-	  content: "";
-	  left: 0;
-	  right: 0;
-	  z-index: -1;
-	  
-	  display: block;
-	  background-image: url('/resources/img/default-cover.jpg') no-repeat;
-	  width: 100%;
-	  height: 300px;
-	  
-	  -webkit-filter: blur(5px);
-	  -moz-filter: blur(5px);
-	  -o-filter: blur(5px);
-	  -ms-filter: blur(5px);
-	  filter: blur(5px);
-	}
+	position : relative;
+	overflow : auto;
+	height   : 320px;
 
 	.profile-cover {
-	  position: fixed;
-	  left: 0;
-	  right: 0;
-	  z-index: 0;
-	  margin-left: 20px;
-	  margin-right: 20px;
+		position   : absolute;
+		width      : 100%;
+		height     : 320px;
+		overflow   : hidden;
+		text-align : center;
+
+		img {
+			width          : 110%;
+			height         : 330px;
+			-webkit-filter : blur(3px);
+			-moz-filter    : blur(3px);
+			-o-filter      : blur(3px);
+			-ms-filter     : blur(3px);
+			filter         : blur(3px);
+			clip           : rect(2px,365px,457px,2px);
+		}
+
+	}
+
+	.profile {
+		position : absolute;
+		height   : 200px;
+		width    : 80%;
+
+		.wrapper {
+			position         : absolute;
+			margin-top       : 10%;
+			margin-left      : 4%;
+			width            : 100%;
+			height           : 100%;
+			.profile-img {
+				position         : absolute;
+				background-color : #FFF;
+				width            : 120px;
+				height           : auto;
+				padding          : 10px;
+				text-align       : center;
+				border           : 1px solid #7B7B7B;
+				margin-top       : 5%;
+				margin-left      : 4%;
+				img {
+					width  : 100px;
+					height : 100px;
+				}
+			}
+
+			.profile-name {
+				margin-left : 30%;
+				margin-top  : 5%;
+				display     : block;
+				height      : 100%;
+				h1 {
+					color : #FFF;
+				}
+				h4 {
+					color : #000;
+				}
+				p {
+					color : #000;
+					i {
+
+					}
+				}
+			}
+		}
+		.overlay-bg {
+			position         : absolute;
+			margin-top       : 10%;
+			margin-left      : 4%;
+			width            : 100%;
+			height           : 100%;
+			background-color : #666666;
+			opacity          : 0.8;
+		}
+
+
 	}
 }
+
+#additional-info {
+
+	min-height       : 200px;
+	background-color : #FFF;
+
+	.content {
+		padding : 35px;
+		p {
+			word-wrap : break-word;
+		}
+	}
+}
+
+#comment-section {
+	min-height       : 200px;
+	background-color : #FFF;
+	border-top       : 1px solid #999999;
+	.comment {
+		color   : #999999;
+		padding : 20px 50px;
+
+		h3 {
+			color      : #000;
+			margin-top : 0px;
+		}
+
+		textarea {
+			width         : 100%;
+			margin-bottom : 15px;
+			resize        : none;
+			padding       : 10px;
+		}
+
+		button {
+			border-radius: 0px;
+		}
+	}
+
+	.comments {
+		min-height: 200px;
+
+		ul {
+			list-style : none;
+			padding : 10px 40px;
+			li {
+				padding : 10px 15px;
+				background-color : #FFF;
+				border-top       : 1px solid #999999;
+
+				.comment-date {
+					margin-bottom : 10px;
+					font-style    : italic;
+				}
+				.comment-tools {
+					margin-top : 10px;
+					a {
+						cursor : pointer;
+					}
+				}
+			}
+		}
+	}
+}
+
 #main-info {
 
 	.user-img {
@@ -49,19 +170,24 @@ body {
 
 			img {
 				margin-top : 15px;
+				height: 180px;
+				max-height : 185px;
 			}
 		}
 
 		.user-img-list {
 			list-style     : none;
 			padding-bottom : 10px;
-
+			padding : 0px;
+			margin-left : 18%;
+			padding-bottom : 20px;
 			li {
 				display: inline;
 				img {
-					height  : 25%;
-					width   : 25%;
-					padding : 5px;
+					height     : 25%;
+					min-height : 105px;
+					width      : 25%;
+					padding    : 5px;
 				}
 			}
 		}
@@ -80,6 +206,72 @@ body {
 			tbody {
 
 			}
+		}
+	}
+
+}
+
+@media ( max-width : 670px ) {
+
+	#profile-card {
+
+		.profile {
+
+			.wrapper {
+
+				.profile-name {
+					margin-left : 150px;
+				}
+			}
+		}
+	}
+}
+
+@media ( max-width : 480px ) {
+
+	#profile-card {
+		position : relative;
+		overflow : auto;
+		height   : 320px;
+
+		.profile-cover {
+			position   : absolute;
+			width      : 100%;
+			height     : 320px;
+			overflow   : hidden;
+			text-align : center;
+
+		}
+
+		.profile {
+			height   : 280px;
+			width    : 90%;
+
+			.wrapper {
+
+				.profile-img {
+					margin-left: 23%;
+					positio : relative;
+					img {
+						width  : 100px;
+						height : 100px;
+					}
+				}
+
+				.profile-name {
+					margin-left : 5%;
+					margin-top  : 150px;
+					display     : block;
+					height      : auto;
+
+					h1 {
+						font-size: 30px;
+						color : #FFF;
+					}
+
+				}
+			}
+
 		}
 	}
 
